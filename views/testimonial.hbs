@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>My Testimonial</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/nav.css" />
+      <link rel="stylesheet" href="assets/css/testimonial.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img src="assets/icon/logo.png" alt="" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" onclick="hamburgerToggle()" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="ml-auto">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="ml-auto">
+                    <a class="nav-link" href="/blog">Add Project</a>
+                </li>
+                <li class="ml-auto">
+                    <a class="nav-link" href="/testimonial">Testimonial</a>
+                </li>
+            </ul>
+            <div class="ml-auto">
+                <a class="nav-link" href="/contact">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+        <div id="hamburger-container" class="hamburger-container hide">
+            <h1 class="hamburger-container-item">
+                <a href="/">Home</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/blog">My Project</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/testimonial">Testimonial</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/contact">Contact Me</a>
+            </h1>
+        </div>  
+
+    <div class="container">
+        <h1 class="text-center" style="font-family: 'Times New Roman', Times, serif;">My Testimonials</h1>
+        <div class="container-rating text-center">
+            <h2 class="mt-4 mb-4">Rating BasketBall Player By Star <i class="fas fa-star"></i></h2>
+            <div class="btn-group" role="group" aria-label="Rating Buttons">
+              <button class="rating-btn btn btn-custom" data-rating="all">All</button>
+              <button class="rating-btn btn btn-custom" data-rating="1">1 <i class="fa-solid fa-star"></i></button>
+              <button class="rating-btn btn btn-custom" data-rating="2">2 <i class="fa-solid fa-star"></i></button>
+              <button class="rating-btn btn btn-custom" data-rating="3">3 <i class="fa-solid fa-star"></i></button>
+              <button class="rating-btn btn btn-custom" data-rating="4">4 <i class="fa-solid fa-star"></i></button>
+              <button class="rating-btn btn btn-custom" data-rating="5">5 <i class="fa-solid fa-star"></i></button>
+          </div>
+          </div>
+
+        <section class="testimonials" id="testimonials">
+        </section>
+    </div>
+
+    <script src="assets/js/testimonial.js"></script>
+    <script src="assets/js/nav.js"></script>
+</body>
+</html>

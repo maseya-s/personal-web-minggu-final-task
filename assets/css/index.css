@@ -1,0 +1,138 @@
+  body {
+    background-color: #dfdfdf;
+}
+
+.icon{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+
+.profile-container {
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    max-width: 800px;
+    height: 400px;
+    padding-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 8px 3px 10px 10px rgba(87, 81, 81, 0.1);
+}
+
+.profile-info {
+    margin-left: 50px;
+    width: 400px;
+    height: 50px;
+    padding-top: 50px;
+}
+
+.profile-info h2 {
+    margin-block-end: 0%;
+}
+
+.profile-info p {
+    margin-block-start: 10px;
+    font-size: 90%;
+    text-align: justify;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 10px;
+}
+
+.contact-button {
+    background-color: #111727;
+    width: 85px;
+    height: 30px;
+    border-radius: 100px;
+    border-color: #0e1321;
+    margin-top: 10px;
+}
+
+.contact-button a{
+    text-decoration: none;
+    color: white;
+    font-family: 'verdana';
+}
+
+.download-button {
+    color: black;
+    background-color: transparent;
+    border-color: transparent;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+}
+
+.social-icons {
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.profile-photo {
+    margin: auto;
+    margin-left: 500px;
+    width: 230px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 8px 3px 10px 5px rgba(0, 0, 0, 0.09);
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 230px;
+    height: 75%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.profile-photo h2 {
+    font-size: large;
+    font-family: 'Franklin Gothic Medium';
+    text-align: center;
+    margin-block-end: 0;
+}
+
+.profile-photo h4 {
+    font-size: small;
+    text-align: center;
+    margin-block: 0;
+}
+
+@media screen and (max-width: 430px){
+    .profile-container {
+        margin: 
+        width: 450px;
+        height: 680px;
+    }
+
+    .profile-info{
+        text-align: center;
+        padding-right: 30px;
+    }
+    .profile-photo {
+        margin: auto;
+        margin-top: 300px;
+        width: 230px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 8px 3px 10px 5px rgba(0, 0, 0, 0.09);
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 330px){
+    .profile-container {
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .profile-info{
+        text-align: center;
+    }
+    .navbar{
+        margin: auto;
+        padding: auto;
+    }
+
+}
+  

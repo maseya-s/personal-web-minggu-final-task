@@ -1,0 +1,14 @@
+.s-input {
+    border-style: none;
+    background-color: rgb(204, 204, 204);
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+}
+

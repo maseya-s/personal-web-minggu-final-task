@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Add Blog</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assets/css/blog.css">
+      <link rel="stylesheet" href="assets/css/nav.css">
+  </head>
+
+  <body style="background-color: #dfdfdf;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img src="assets/icon/logo.png" alt="" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" onclick="hamburgerToggle()" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="ml-auto">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="ml-auto">
+                    <a class="nav-link" href="/blog">Add Project</a>
+                </li>
+                <li class="ml-auto">
+                    <a class="nav-link" href="/testimonial">Testimonial</a>
+                </li>
+            </ul>
+            <div class="ml-auto">
+                <a class="nav-link" href="/contact">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+        <div id="hamburger-container" class="hamburger-container hide">
+            <h1 class="hamburger-container-item">
+                <a href="/">Home</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/blog">My Project</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/testimonial">Testimonial</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/contact">Contact Me</a>
+            </h1>
+        </div>  
+
+    <div class="container blog">
+        <div class="blog-form">
+            <div class="form-container">
+                <form action="/add-project" method="POST" class="bg-light p-4 rounded">
+                    <h1 class="text-center" style="font-size: 40px;">ADD MY PROJECT</h1>
+                    <div class="form-group">
+                        <label for="input-blog-title">Project Name</label>
+                        <input id="input-blog-title" name="title" class="form-control" required />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="input-start-date">Start Date</label>
+                            <input id="input-start-date" name="startDate" type="date" class="form-control" required />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="input-end-date">End Date</label>
+                            <input id="input-end-date" name="endDate" type="date" class="form-control" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-blog-content">Description</label>
+                        <textarea id="input-blog-content" name="content" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <p>Technology</p>
+                        <div>
+                            <div class="form-check">
+                                <input type="checkbox" id="html" name="technologies" value="HTML" class="form-check-input" />
+                                <label for="html" class="form-check-label">HTML</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="css" name="technologies" value="CSS" class="form-check-input" />
+                                <label for="css" class="form-check-label">CSS</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="js" name="technologies" value="JavaScript" class="form-check-input" />
+                                <label for="js" class="form-check-label">JavaScript</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="TypeScript" name="technologies" value="TypeScript" class="form-check-input" />
+                                <label for="TypeScript" class="form-check-label">TypeScript</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-dark" style="width: 100%;">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="dummy-blog">
+            <div>
+                <a href="blog-detail.html">
+                    <img src="https://cdn.logojoy.com/wp-content/uploads/2018/07/30103421/personal18.png" alt="dummy">
+                    <p>My Personal Web</p>
+                </a>
+            </div>
+        </div>
+
+        <hr class="line" />
+        <div id="contents" class="blog-list"></div>
+    </div>
+
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+</html>
