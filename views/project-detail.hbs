@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail</title>
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">
+            <img src="assets/icon/logo.png" alt="" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" onclick="hamburgerToggle()" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="ml-auto">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="ml-auto">
+                    <a class="nav-link" href="/blog">Add Project</a>
+                </li>
+                <li class="ml-auto">
+                    <a class="nav-link" href="/testimonial">Testimonial</a>
+                </li>
+            </ul>
+            <div class="ml-auto">
+                <a class="nav-link" href="/contact">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+        <div id="hamburger-container" class="hamburger-container hide">
+            <h1 class="hamburger-container-item">
+                <a href="/">Home</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/blog">My Project</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/testimonial">Testimonial</a>
+            </h1>
+            <h1 class="hamburger-container-item">
+                <a href="/contact">Contact Me</a>
+            </h1>
+        </div>  
+    <div class="project-detail">
+        <h1>{{project.title}}</h1>
+        <p>{{project.content}}</p>
+        <p>Start Date: {{project.startDate}}</p>
+        <p>End Date: {{project.endDate}}</p>
+        <p>Technologies: {{project.technologies.join(', ')}}</p>
+        <a href="/edit-project/{{@index}}">Edit Project</a>
+        <form action="/delete-project/{{@index}}" method="POST">
+            <button type="submit">Delete Project</button>
+        </form>
+    </div>
+</body>
+</html>

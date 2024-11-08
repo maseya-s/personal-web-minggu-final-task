@@ -51,69 +51,83 @@
             </h1>
         </div>  
 
-    <div class="container blog">
-        <div class="blog-form">
-            <div class="form-container">
-                <form action="/add-project" method="POST" class="bg-light p-4 rounded">
-                    <h1 class="text-center" style="font-size: 40px;">ADD MY PROJECT</h1>
-                    <div class="form-group">
-                        <label for="input-blog-title">Project Name</label>
-                        <input id="input-blog-title" name="title" class="form-control" required />
+            <div class="container blog">
+                <div class="blog-form">
+                    <div class="form-container">
+                        <form action="/add-project" method="POST" class="bg-light p-4 rounded">
+                            <h1 class="text-center" style="font-size: 40px;">ADD MY PROJECT</h1>
+                            <div class="form-group">
+                                <label for="input-blog-title">Project Name</label>
+                                <input id="input-blog-title" name="title" class="form-control" required />
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="input-start-date">Start Date</label>
+                                    <input id="input-start-date" name="startDate" type="date" class="form-control" required />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="input-end-date">End Date</label>
+                                    <input id="input-end-date" name="endDate" type="date" class="form-control" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-blog-content">Description</label>
+                                <textarea id="input-blog-content" name="content" class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <p>Technology</p>
+                                <div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="html" name="technologies" value="HTML" class="form-check-input" />
+                                        <label for="html" class="form-check-label">HTML</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="css" name="technologies" value="CSS" class="form-check-input" />
+                                        <label for="css" class="form-check-label">CSS</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="js" name="technologies" value="JavaScript" class="form-check-input" />
+                                        <label for="js" class="form-check-label">JavaScript</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="TypeScript" name="technologies" value="TypeScript" class="form-check-input" />
+                                        <label for="TypeScript" class="form-check-label">TypeScript</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="image">Upload Image:</label>
+                                <input type="file" id="image" name="image" accept="image/*">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-dark" style="width: 100%;">Post</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="input-start-date">Start Date</label>
-                            <input id="input-start-date" name="startDate" type="date" class="form-control" required />
+                </div>
+                <hr class="line" />
+                <div id="contents" class="blog-list">
+                    {{#each blogs}}
+                        <div class="blog-list-item card">
+                            <div class="blog-image">
+                                <img src="{{this.image}}" alt="{{this.title}}" />
+                            </div>
+                            <div class="blog-content">
+                                <h2>{{this.title}} - {{this.startDate}} to {{this.endDate}}</h2>
+                                <p>{{this.content}}</p>
+                                <p><strong>Technologies Used:</strong> {{this.technologies.join ', '}}</p>
+                                <div class="btn-group">
+                                    <a href="/project-detail/{{@index}}" class="btn btn-info">Detail</a>
+                                    <a href="/edit-project/{{@index}}" class="btn btn-warning">Edit</a>
+                                    <form action="/delete-project/{{@index}}" method="POST" style="display:inline;">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group col-md-6">
-                            <label for="input-end-date">End Date</label>
-                            <input id="input-end-date" name="endDate" type="date" class="form-control" required />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-blog-content">Description</label>
-                        <textarea id="input-blog-content" name="content" class="form-control" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <p>Technology</p>
-                        <div>
-                            <div class="form-check">
-                                <input type="checkbox" id="html" name="technologies" value="HTML" class="form-check-input" />
-                                <label for="html" class="form-check-label">HTML</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" id="css" name="technologies" value="CSS" class="form-check-input" />
-                                <label for="css" class="form-check-label">CSS</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" id="js" name="technologies" value="JavaScript" class="form-check-input" />
-                                <label for="js" class="form-check-label">JavaScript</label>
-                            </div>
-                            <div class="form-check">
-                                <input type="checkbox" id="TypeScript" name="technologies" value="TypeScript" class="form-check-input" />
-                                <label for="TypeScript" class="form-check-label">TypeScript</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-dark" style="width: 100%;">Post</button>
-                    </div>
-                </form>
+                    {{/each}}
+                </div>
             </div>
-        </div>
-
-        <div class="dummy-blog">
-            <div>
-                <a href="blog-detail.html">
-                    <img src="https://cdn.logojoy.com/wp-content/uploads/2018/07/30103421/personal18.png" alt="dummy">
-                    <p>My Personal Web</p>
-                </a>
-            </div>
-        </div>
-
-        <hr class="line" />
-        <div id="contents" class="blog-list"></div>
-    </div>
 
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/blog.js"></script>

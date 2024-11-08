@@ -166,32 +166,6 @@ select {
   text-align: justify;
 }
 
-.dummy-blog {
-  max-width: 300px;
-  margin: auto;
-  border: 2px solid transparent;
-  text-align: center;
-  box-sizing: border-box;
-  border-radius: 5px;
-  box-shadow: 0 0 5px black;
-  margin-bottom: 30px;
-  cursor: pointer;
-}
-
-.dummy-blog a {
-  color: black;
-  text-decoration: none;
-}
-
-.dummy-blog img {
-  height: 150px;
-  width: 100%;
-}
-
-.dummy-blog:hover{
-  box-shadow: -3px 3px 5px 5px black;
-}
-
 /* Card */
 .card {
   width: 100%;
